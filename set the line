@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+int al[3];
+int i,a;
+for(i=0;i<=2;i++)   
+{
+	printf("%d.sayi gir-> ",i+1);
+	scanf("%d",&al[i]);
+}
+int kucuk=al[1];
+int buyuk=al[0];
+for(i=0;i<=2;i++)
+{
+	if(al[i]>buyuk)
+	{
+		buyuk=al[i];
+	}
+}
+for(i=0;i<=2;i++)	
+{
+	if(al[i]<kucuk)
+	{
+		kucuk=al[i];
+	}
+}
+printf("%d ",buyuk);
+for(i=0;i<=2;i++)
+{
+	if(al[i]!=buyuk && al[i]!=kucuk)
+	{
+		printf("%d ",al[i]);
+	}
+}
+printf("%d ",kucuk);
+	
+
+	
+	return 0;
+}
